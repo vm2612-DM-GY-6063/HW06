@@ -1,6 +1,6 @@
 let data;
 let points = [];
-let maxPoints = 100; // Limit to 1000 points for performance
+let maxPoints = 10000; // Limit to 1000 points for performance
 let particles = []; // Store particles for animation
 
 function preload() {
