@@ -40,8 +40,42 @@ function draw() {
     ellipse(x, y, 5, 5); // Plot tree as a small circle
   }
 
-  // Add title
+  // Add NYC borough names
   fill(255);
+  textSize(14);
+  textAlign(CENTER);
+  text("Bronx", width * 0.3, height * 0.2);            // Approximate Bronx location
+  text("Manhattan", width * 0.45, height * 0.3);      // Approximate Manhattan location
+  text("Brooklyn", width * 0.55, height * 0.55);      // Approximate Brooklyn location
+  text("Queens", width * 0.7, height * 0.4);          // Approximate Queens location
+  text("Staten Island", width * 0.2, height * 0.75);  // Approximate Staten Island location
+
+  // Add legend for tree health
+  drawLegend();
+}
+
+function drawLegend() {
+  fill(255);
+  textAlign(LEFT);
   textSize(16);
-  text("Tree Health Visualization (NYC Tree Census 2015)", 20, 30);
+  text("Tree Health Legend:", 20, height - 120);
+
+  // Good
+  fill(0, 255, 0, 150);
+  ellipse(30, height - 90, 10, 10);
+  fill(255);
+  textSize(14);
+  text("Good", 50, height - 85);
+
+  // Fair
+  fill(255, 255, 0, 150);
+  ellipse(30, height - 70, 10, 10);
+  fill(255);
+  text("Fair", 50, height - 65);
+
+  // Poor
+  fill(255, 0, 0, 150);
+  ellipse(30, height - 50, 10, 10);
+  fill(255);
+  text("Poor", 50, height - 45);
 }
