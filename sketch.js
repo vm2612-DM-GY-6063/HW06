@@ -8,7 +8,7 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(50); // Set background to white
+  background(30); // Set background to white
 
   // Process the table data
   for (let i = 0; i < table.getRowCount(); i++) {
@@ -23,7 +23,7 @@ function setup() {
 }
 
 function draw() {
-  background(255); // White background
+  background(30); // White background
 
   // Display each tree as a circle
   for (let tree of trees) {
