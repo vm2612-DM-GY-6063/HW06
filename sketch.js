@@ -8,7 +8,7 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(255);
+  background(50); // Set background to white
 
   // Process the table data
   for (let i = 0; i < table.getRowCount(); i++) {
@@ -23,7 +23,7 @@ function setup() {
 }
 
 function draw() {
-  background(255);
+  background(255); // White background
 
   // Display each tree as a circle
   for (let tree of trees) {
@@ -31,43 +31,45 @@ function draw() {
     let y = map(tree.lat, 40.5, 40.9, height - 50, 50);   // Latitude range to canvas
 
     // Color based on health
-    if (tree.health === "Good") fill(0, 255, 0, 150); // Green
-    else if (tree.health === "Fair") fill(255, 255, 0, 150); // Yellow
+    if (tree.health === "Good") fill(0, 200, 0, 150); // Green
+    else if (tree.health === "Fair") fill(255, 200, 0, 150); // Yellow
     else if (tree.health === "Poor") fill(255, 0, 0, 150); // Red
-    else fill(100); // Default for undefined health
+    else fill(150); // Default for undefined health
 
     noStroke();
     ellipse(x, y, 5, 5); // Plot tree as a small circle
   }
 
 
+  textAlign(CENTER);
+ 
 
   // Add legend for tree health
   drawLegend();
 }
 
 function drawLegend() {
-  fill(255);
+  fill(50);
   textAlign(LEFT);
   textSize(16);
   text("Tree Health Legend:", 20, height - 120);
 
   // Good
-  fill(0, 255, 0, 150);
+  fill(0, 200, 0, 150);
   ellipse(30, height - 90, 10, 10);
-  fill(255);
+  fill(50);
   textSize(14);
   text("Good", 50, height - 85);
 
   // Fair
-  fill(255, 255, 0, 150);
+  fill(255, 200, 0, 150);
   ellipse(30, height - 70, 10, 10);
-  fill(255);
+  fill(50);
   text("Fair", 50, height - 65);
 
   // Poor
   fill(255, 0, 0, 150);
   ellipse(30, height - 50, 10, 10);
-  fill(255);
+  fill(50);
   text("Poor", 50, height - 45);
 }
