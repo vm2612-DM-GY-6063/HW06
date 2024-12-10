@@ -49,27 +49,27 @@ function draw() {
 }
 
 function drawLegend() {
-  fill(50);
+   fill(255); // White text
   textAlign(LEFT);
   textSize(16);
-  text("Tree Health Legend:", 20, height - 120);
+  text("Tree Health Legend:", 20, 40);
 
   // Good
   fill(0, 200, 0, 150);
-  ellipse(30, height - 90, 10, 10);
-  fill(50);
+  ellipse(30, 70, 10, 10);
+  fill(255); // White text
   textSize(14);
-  text("Good", 50, height - 85);
+  text("Good", 50, 75);
 
   // Fair
   fill(255, 200, 0, 150);
-  ellipse(30, height - 70, 10, 10);
-  fill(50);
-  text("Fair", 50, height - 65);
+  ellipse(30, 90, 10, 10);
+  fill(255); // White text
+  text("Fair", 50, 95);
 
   // Poor
   fill(255, 0, 0, 150);
-  ellipse(30, height - 50, 10, 10);
-  fill(50);
-  text("Poor", 50, height - 45);
+  ellipse(30, 110, 10, 10);
+  fill(255); // White text
+  text("Poor", 50, 115);
 }
