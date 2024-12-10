@@ -23,7 +23,7 @@ function setup() {
 }
 
 function draw() {
-  background(30);
+  background(255);
 
   // Display each tree as a circle
   for (let tree of trees) {
@@ -40,15 +40,7 @@ function draw() {
     ellipse(x, y, 5, 5); // Plot tree as a small circle
   }
 
-  // Add NYC borough names
-  fill(255);
-  textSize(14);
-  textAlign(CENTER);
-  text("Bronx", width * 0.3, height * 0.2);            // Approximate Bronx location
-  text("Manhattan", width * 0.45, height * 0.3);      // Approximate Manhattan location
-  text("Brooklyn", width * 0.55, height * 0.55);      // Approximate Brooklyn location
-  text("Queens", width * 0.7, height * 0.4);          // Approximate Queens location
-  text("Staten Island", width * 0.2, height * 0.75);  // Approximate Staten Island location
+
 
   // Add legend for tree health
   drawLegend();
