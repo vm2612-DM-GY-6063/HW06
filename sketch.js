@@ -8,7 +8,7 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(30);
+  background(255);
 
   // Process the table data
   for (let i = 0; i < table.getRowCount(); i++) {
